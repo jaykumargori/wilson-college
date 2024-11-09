@@ -3,16 +3,10 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Bell, Book, ChevronDown, ChevronLeft, ChevronRight, Facebook, GraduationCap, Instagram, Linkedin, Mail, MapPin, Menu, MessageSquare, Phone, Twitter, Users, Youtube } from "lucide-react"
+import { Bell, Book, ChevronLeft, ChevronRight, Facebook, GraduationCap, Instagram, Linkedin, Mail, MapPin, MessageSquare, Phone, Twitter, Users, Youtube } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 import {
   NavigationMenu,
   NavigationMenuContent,
