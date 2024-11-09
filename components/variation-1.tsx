@@ -79,7 +79,7 @@ export function Variation_1() {
                 College Prospectus 2024-2025
               </Button>
               <Button variant="outline" className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">
-                College Magazine "Wilsonian"
+               {`College Magazine "Wilsonian"`}
               </Button>
             </div>
           </div>
@@ -101,7 +101,7 @@ export function Variation_1() {
                 <div className="grid gap-1 p-2">
                   <NavigationMenuLink className="p-2 hover:bg-gray-800">Vision & Mission</NavigationMenuLink>
                   <NavigationMenuLink className="p-2 hover:bg-gray-800">History</NavigationMenuLink>
-                  <NavigationMenuLink className="p-2 hover:bg-gray-800">Principal's Message</NavigationMenuLink>
+                  <NavigationMenuLink className="p-2 hover:bg-gray-800">{`Principal's Message`}</NavigationMenuLink>
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -195,7 +195,7 @@ export function Variation_1() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
               <h2 className="text-4xl font-bold tracking-tight sm:text-6xl">Excellence in Education</h2>
-              <p className="mt-4 text-xl">Shaping Tomorrow's Leaders Since 1832</p>
+              <p className="mt-4 text-xl">{`Shaping Tomorrow's Leaders Since 1832`}</p>
             </div>
           </div>
         </div>
