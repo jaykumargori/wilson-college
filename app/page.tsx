@@ -1,7 +1,7 @@
-import { Variation_1 } from "@/components/variation-1";
+import { HomepageComponent } from "@/components/homepage";
 
 export default function Home() {
   return (
-    <Variation_1 />
+    <HomepageComponent />
   );
 }
