@@ -434,12 +434,12 @@ export default function Homepage() {
               {navItems.map((item, index) => (
                 <div key={index} className="relative group d:flex">
                   {'href' in item ? (
-                    <Link href={item.href} className="py-2 px-3 text-gray-700 hover:bg-blue-50 transition duration-300 rounded">
+                    <Link href={item.href} className="py-2 px-3 text-gray-700 hover:bg-blue-900 hover:text-white transition duration-300 rounded-lg">
                       {item.title}
                     </Link>
                   ) : (
                     <>
-                      <button className="py-2 px-3 text-gray-700 hover:bg-blue-50 transition duration-300 flex items-center rounded">
+                      <button className="py-2 px-3 text-gray-700 hover:bg-blue-900 hover:text-white transition duration-300 flex items-center rounded-lg">
                         {item.title}
                         <ChevronDown className="ml-1 h-4 w-4" />
                       </button>
@@ -450,13 +450,13 @@ export default function Homepage() {
                               <Link
                                 key={subIndex}
                                 href={subItem.href}
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-900 hover:text-white transition-colors duration-300 rounded-lg mx-1"
                               >
                                 {subItem.title}
                               </Link>
                             ) : (
                               <div key={subIndex} className="relative group/sub">
-                                <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 flex items-center justify-between">
+                                <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-900 hover:text-white transition-colors duration-300 flex items-center justify-between rounded-lg mx-1">
                                   {subItem.title}
                                   <ChevronRight className="h-4 w-4" />
                                 </button>
@@ -466,7 +466,7 @@ export default function Homepage() {
                                       <Link
                                         key={subSubIndex}
                                         href={subSubItem.href}
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50"
+                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-900 hover:text-white transition-colors duration-300 rounded-lg mx-1"
                                       >
                                         {subSubItem.title}
                                       </Link>
