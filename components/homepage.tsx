@@ -7,14 +7,6 @@ import { Bell, Book, ChevronLeft, ChevronRight, Facebook, GraduationCap, Instagr
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
 import MultiLevelNav from "./ui/multi-level-nav"
@@ -47,8 +39,6 @@ const images = [
 ]
 
 export function HomepageComponent() {
-  const [activeCollege, setActiveCollege] = React.useState<string | null>(null)
-  const [activeSection, setActiveSection] = React.useState<string | null>(null)
   const [currentIndex, setCurrentIndex] = React.useState(0)
   const [isAnimating, setIsAnimating] = React.useState(false)
   const timeoutRef = React.useRef<NodeJS.Timeout | null>(null)

@@ -1,7 +1,7 @@
-import { HomepageComponent } from "@/components/homepage";
+import Homepage from "@/components/professional-homepage";
 
 export default function Home() {
   return (
-    <HomepageComponent />
+    <Homepage />
   );
 }
