@@ -4,20 +4,19 @@ import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Award, BookOpen, Globe, Medal, FlaskConical, Users, ExternalLink, GraduationCap, Book } from 'lucide-react'
+import { Award, BookOpen, Globe, Medal, FlaskConical, Users, ExternalLink } from 'lucide-react'
 import WorldMap from 'react-svg-worldmap'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { Navbar } from "@/components/navbar"
 
 const timelineEvents = [
-    { year: 2023, event: "University of Calabria, Rende (Cosenza), Italy", icon: GraduationCap, country: "IT", coordinates: [39.3566, 16.2266] },
+    { year: 2023, event: "University of Calabria, Rende (Cosenza), Italy", icon: BookOpen, country: "IT", coordinates: [39.3566, 16.2266] },
     { year: 2022, event: "Urban Transitions Conference, Sitges, Barcelona, Spain", icon: Globe, country: "ES", coordinates: [41.2372, 1.8059] },
-    { year: 2019, event: "Orebro University, Sweden", icon: GraduationCap, country: "SE", coordinates: [59.2753, 15.2134] },
+    { year: 2019, event: "Orebro University, Sweden", icon: BookOpen, country: "SE", coordinates: [59.2753, 15.2134] },
     { year: 2016, event: "Air & Waste Management Association annual Conference, Wyoming USA", icon: Globe, country: "US", coordinates: [43.0760, -107.2903] },
     { year: 2013, event: "International Society for Environmental Epidemiology Conference, Basel, Switzerland", icon: Globe, country: "CH", coordinates: [47.5596, 7.5886] },
-    { year: 2012, event: "Healthy Buildings 2012 conference, Queensland University of Technology, Australia", icon: Book, country: "AU", coordinates: [-27.4698, 153.0251] },
+    { year: 2012, event: "Healthy Buildings 2012 conference, Queensland University of Technology, Australia", icon: BookOpen, country: "AU", coordinates: [-27.4698, 153.0251] },
     { year: 2010, event: "Visited United State Environmental Protection Agency (EPA) New Jersey USA", icon: Globe, country: "US", coordinates: [40.7128, -74.0060] },
     { year: 2010, event: "AAAR 2010 Specialty Conference, San Diego, California USA", icon: Globe, country: "US", coordinates: [32.7157, -117.1611] },
 ]
@@ -98,10 +97,10 @@ export default function PrincipalsMessage() {
         <div className="min-h-screen bg-gray-50">
             <Navbar />
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-20">
+            <section className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-16">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto">
-                        <div className="w-64 h-64 md:w-80 md:h-80 relative">
+                        <div className="w-48 h-48 md:w-64 md:h-64 relative">
                             <Image
                                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wilson%20college%20principal.jpg-WmiyZK3kREWsST0JT4TwW3wddu09cT.jpeg"
                                 alt="Dr. Jamson Masih"
@@ -110,14 +109,14 @@ export default function PrincipalsMessage() {
                             />
                         </div>
                         <div className="md:flex-1 text-center md:text-left">
-                            <h1 className="text-5xl font-bold mb-4">Dr. Jamson Masih</h1>
-                            <p className="text-2xl text-amber-400 mb-2">Principal & Associate Professor (Chemistry)</p>
-                            <p className="text-xl text-blue-200 mb-6">M.Sc Ph.D, FICS, FICC</p>
-                            <p className="text-lg text-white/90 italic border-l-4 border-amber-400 pl-4">
+                            <h1 className="text-4xl font-bold mb-3">Dr. Jamson Masih</h1>
+                            <p className="text-xl text-amber-400 mb-2">I/C Principal & Associate Professor (Chemistry)</p>
+                            <p className="text-lg text-blue-200 mb-4">M.Sc Ph.D, FICS, FICC</p>
+                            <p className="text-base text-white/90 italic border-l-4 border-amber-400 pl-4">
                                 {`Dr Jamson is widely known in the educational circle and is on the Bombay YMCA Committee.
-                His goal is to see that the vision of Wilson College is fulfilled in each area of student
-                and staff development and his dedication for quality education has its focus in enriching
-                the community.`}
+                                His goal is to see that the vision of Wilson College is fulfilled in each area of student
+                                and staff development and his dedication for quality education has its focus in enriching
+                                the community.`}
                             </p>
                         </div>
                     </div>
@@ -227,32 +226,25 @@ export default function PrincipalsMessage() {
                                 <BookOpen className="w-8 h-8 mr-3 text-blue-900" />
                                 Publications and Citations
                             </h2>
-                            <Accordion type="single" collapsible className="w-full">
-                                <AccordionItem value="item-1">
-                                    <AccordionTrigger>View Publication History</AccordionTrigger>
-                                    <AccordionContent>
-                                        <div className="space-y-4">
-                                            <p>{`Dr. Jamson Masih has an extensive publication history in the field of Environmental and Analytical Chemistry. His work has been cited numerous times, contributing significantly to the scientific community's understanding of air pollution and its effects.`}</p>
-                                            <div className="flex flex-col space-y-2">
-                                                <Link
-                                                    href="https://scholar.google.co.in/citations?user=FE1IBDwAAAAJ&hl=en"
-                                                    target="_blank"
-                                                    className="text-blue-600 hover:underline flex items-center"
-                                                >
-                                                    Google Scholar Profile <ExternalLink className="ml-2 h-4 w-4" />
-                                                </Link>
-                                                <Link
-                                                    href="https://www.scopus.com/authid/detail.uri?authorId=26323720000"
-                                                    target="_blank"
-                                                    className="text-blue-600 hover:underline flex items-center"
-                                                >
-                                                    Scopus Profile <ExternalLink className="ml-2 h-4 w-4" />
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </AccordionContent>
-                                </AccordionItem>
-                            </Accordion>
+                            <div className="space-y-4">
+                                <p>{`Dr. Jamson Masih has an extensive publication history in the field of Environmental and Analytical Chemistry. His work has been cited numerous times, contributing significantly to the scientific community's understanding of air pollution and its effects.`}</p>
+                                <div className="flex flex-col space-y-2">
+                                    <Link
+                                        href="https://scholar.google.co.in/citations?user=FE1IBDwAAAAJ&hl=en"
+                                        target="_blank"
+                                        className="text-blue-600 hover:underline flex items-center"
+                                    >
+                                        Google Scholar Profile <ExternalLink className="ml-2 h-4 w-4" />
+                                    </Link>
+                                    <Link
+                                        href="https://www.scopus.com/authid/detail.uri?authorId=26323720000"
+                                        target="_blank"
+                                        className="text-blue-600 hover:underline flex items-center"
+                                    >
+                                        Scopus Profile <ExternalLink className="ml-2 h-4 w-4" />
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

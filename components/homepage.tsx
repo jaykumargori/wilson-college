@@ -395,7 +395,7 @@ export default function Homepage() {
                   <div className="w-28 h-28 md:w-32 md:h-32 relative rounded-full border-4 border-amber-400 overflow-hidden">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wilson%20college%20principal.jpg-HhWTdiqT6wGhbXDrh8AMNDLlTxg23q.jpeg"
-                      alt="Principal of Wilson College"
+                      alt="I/C Principal of Wilson College"
                       fill
                       className="object-cover"
                     />
@@ -406,7 +406,7 @@ export default function Homepage() {
                     <h2 className="text-2xl font-bold mb-1">{`From the Principal's Desk`}</h2>
                     <div>
                       <span className="text-amber-400 font-semibold">Dr. Jamson Masih</span>
-                      <span className="text-blue-200 text-sm ml-2">Principal, Wilson College</span>
+                      <span className="text-blue-200 text-sm ml-2">I/C Principal, Wilson College</span>
                     </div>
                   </div>
                   <div className="relative text-white/90 italic text-lg mb-6 px-6">
