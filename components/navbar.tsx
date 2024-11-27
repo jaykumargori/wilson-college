@@ -71,7 +71,7 @@ const navItems = [
     ]
   },
   { title: "Admissions", href: "/admissions" },
-  { title: "Research", href: "/research" },
+  { title: "IQAC", href: "/iqac" },
   { title: "Campus Life", href: "/campus-life" },
   { title: "Contact", href: "/contact" },
 ]
