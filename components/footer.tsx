@@ -27,6 +27,7 @@ export function Footer() {
               <Link href="/academics" className="block hover:text-amber-400 transition-colors duration-300">Academics</Link>
               <Link href="/admissions" className="block hover:text-amber-400 transition-colors duration-300">Admissions</Link>
               <Link href="/iqac" className="block hover:text-amber-400 transition-colors duration-300">IQAC</Link>
+              <Link href="/nirf" className="block hover:text-amber-400 transition-colors duration-300">NIRF</Link>
             </nav>
           </div>
           <div>
