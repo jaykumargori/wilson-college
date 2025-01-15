@@ -8,14 +8,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Coffee,
-  Book,
-  Home,
-  Users,
-  Computer,
-  Microscope,
-} from "lucide-react";
+import { Coffee, Book, Home, Users, Computer, Microscope } from "lucide-react";
 import Image from "next/image";
 
 const facilities = [
@@ -306,10 +299,10 @@ export default function FacilitiesPage() {
                             MOTTO
                           </h3>
                           <p className="italic">
-                            "To Help Visually Challenged Students to be
+                            {`"To Help Visually Challenged Students to be
                             Educationally, Technologically, Psychologically and
                             Socially Enriched so That They Are Better Equipped
-                            to Face the Challenges of Life"
+                            to Face the Challenges of Life"`}
                           </p>
                         </div>
 

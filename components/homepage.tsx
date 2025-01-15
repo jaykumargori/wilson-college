@@ -3,7 +3,7 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronLeft, ChevronRight, Facebook, Instagram, Linkedin, Mail, Phone, Twitter, Users, Award, Globe, AlertTriangle, ArrowRight, Quote, GraduationCap, BookOpen, Trophy, Icon, LucideIcon } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Facebook, Instagram, Linkedin, Mail, Phone, Twitter, Users, Award, Globe, AlertTriangle, ArrowRight, Quote, GraduationCap, BookOpen, Trophy, LucideIcon } from 'lucide-react'
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
