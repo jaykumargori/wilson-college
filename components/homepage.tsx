@@ -3,7 +3,7 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronLeft, ChevronRight, Facebook, Instagram, Linkedin, Mail, Phone, Twitter, Users, Award, Globe, AlertTriangle, ArrowRight, Quote } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Facebook, Instagram, Linkedin, Mail, Phone, Twitter, Users, Award, Globe, AlertTriangle, ArrowRight, Quote, GraduationCap, BookOpen, Trophy, Icon, LucideIcon } from 'lucide-react'
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -176,6 +176,54 @@ function AdmissionUpdates() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function AnimatedCount({ end, duration = 2000, label, icon }: { end: number, duration?: number, label: string, icon: LucideIcon }) {
+  const [count, setCount] = React.useState(0)
+  const countRef = React.useRef(0)
+
+  React.useEffect(() => {
+    const startTime = Date.now() 
+    const timer = setInterval(() => {
+      const timePassed = Date.now() - startTime
+      const progress = Math.min(timePassed / duration, 1)
+      countRef.current = Math.floor(progress * end)
+      setCount(countRef.current)
+
+      if (progress === 1) {
+        clearInterval(timer)
+      }
+    }, 16)
+
+    return () => clearInterval(timer)
+  }, [end, duration])
+
+  return (
+    <Card className="text-center">
+      <CardContent className="pt-6">
+      {React.createElement(icon, { className: "h-12 w-12 mx-auto mb-4 text-blue-600" })}
+        <CardTitle className="text-4xl font-bold text-blue-900 mb-2">{count}</CardTitle>
+        <p className="text-gray-600">{label}</p>
+      </CardContent>
+    </Card>
+  )
+}
+
+
+function CollegeStats() {
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        {/* <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">Wilson College by the Numbers</h2> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <AnimatedCount end={5000} label="Students" icon={Users} />
+          <AnimatedCount end={200} label="Faculty Members" icon={GraduationCap} />
+          <AnimatedCount end={50} label="Courses Offered" icon={BookOpen} />
+          <AnimatedCount end={100} label="Years of Excellence" icon={Trophy} />
         </div>
       </div>
     </section>
@@ -359,14 +407,6 @@ export default function Homepage() {
             alt={images[currentIndex].alt}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-800/80 to-transparent" />
-          <div className="absolute inset-0 flex items-center justify-start container mx-auto px-4">
-            <div className="text-white max-w-lg">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Welcome to Wilson College</h2>
-              <p className="text-xl md:text-2xl mb-6">Empowering Minds Since 1832</p>
-              <Button className="bg-amber-400 text-blue-900 hover:bg-amber-500 transition-colors duration-300">Learn More</Button>
-            </div>
-          </div>
         </div>
         <Button
           className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 text-blue-900 hover:bg-white transition-colors duration-300"
@@ -437,6 +477,8 @@ export default function Homepage() {
         </div>
 
       </section>
+
+      <CollegeStats />
 
       {/* Updates, Announcements, and Events Section */}
       <UpdatesSection />

@@ -73,6 +73,7 @@ const navItems = [
   { title: "Admissions", href: "/admissions" },
   { title: "IQAC", href: "/iqac" },
   { title: "NIRF", href: "/nirf" },
+  { title: "Facilities", href: "/facilities" },
   { title: "Contact", href: "/contact" },
 ]
 
