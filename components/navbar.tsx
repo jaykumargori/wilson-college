@@ -74,6 +74,7 @@ const navItems = [
   { title: "IQAC", href: "/iqac" },
   { title: "NIRF", href: "/nirf" },
   { title: "Facilities", href: "/facilities" },
+  { title: "Awards", href: "/awards" },
   { title: "Contact", href: "/contact" },
 ]
 
