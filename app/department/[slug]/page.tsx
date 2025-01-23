@@ -10,11 +10,13 @@ async function getDepartmentData(slug: string): Promise<DepartmentData> {
 }
 
 export async function generateStaticParams() {
-  // In a real-world scenario, this would fetch all department slugs from your data source
-  const departments = ['physics', 'chemistry', 'biology', 'mathematics','english'];
-  
-  return departments.map(slug => ({
-    slug: slug,
+  // Fetch all department slugs from your CMS or API
+  const departments = await client.fetch(
+    `*[_type == "department"]{ "slug": slug.current }`
+  );
+
+  return departments.map((department: { slug: string }) => ({
+    slug: department.slug,
   }));
 }
 
