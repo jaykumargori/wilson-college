@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-
+  output: 'export',
+  optimizeFonts: false,
   images: {
     remotePatterns: [
       {
@@ -12,6 +13,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    unoptimized: true,
   },
 };
 

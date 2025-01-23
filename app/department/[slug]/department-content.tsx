@@ -74,7 +74,7 @@ export function DepartmentContent({ departmentData }: DepartmentContentProps) {
         <Card className="bg-white shadow-lg border-t-4 border-blue-900">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-blue-900">
-              {activeSection.charAt(0).toUpperCase() + activeSection.slice(1)}
+              {activeSection?.charAt(0).toUpperCase() + activeSection.slice(1)}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -112,7 +112,7 @@ export function DepartmentContent({ departmentData }: DepartmentContentProps) {
 
             {activeSection === "activities" && (
               <div className="grid gap-6">
-                {departmentData.activities.map((activity) => (
+                {departmentData.activities?.map((activity) => (
                   <div key={activity.title} className="flex items-center gap-4 border-b border-gray-200 pb-4">
                     <Image
                       src={activity.image}
@@ -132,7 +132,7 @@ export function DepartmentContent({ departmentData }: DepartmentContentProps) {
 
             {activeSection === "events" && (
               <div className="grid gap-6">
-                {departmentData.events.map((event) => (
+                {departmentData.events?.map((event) => (
                   <div key={event.title} className="flex items-center gap-4 border-b border-gray-200 pb-4">
                     <Image
                       src={event.image}
@@ -155,7 +155,7 @@ export function DepartmentContent({ departmentData }: DepartmentContentProps) {
                 <p className="mb-4 text-gray-700">View and download the current syllabus for the {departmentData.name}:</p>
                 <div className="aspect-[16/9] w-full bg-gray-100 rounded-lg">
                   <iframe
-                    src={departmentData.syllabusUrl}
+                    src={departmentData?.syllabusUrl}
                     className="w-full h-full rounded-lg"
                     title="Syllabus PDF Viewer"
                   />
